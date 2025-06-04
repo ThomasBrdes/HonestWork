@@ -1,0 +1,157 @@
+/* Header Section */
+.menu-header {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.menu-header h1 {
+  font-family: 'Big Shoulders Text', cursive;
+  font-size: 3rem;
+  color: #b85c38;
+  margin-bottom: 40px;
+}
+
+.image-strip {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-top: 80px; /* Add space from the top */
+  /* background: none; */
+}
+
+/* Image base styling */
+.scroll-image {
+  position: absolute;
+  top: 20px; /* Pushes images down from the top edge of the strip */
+  width: 280px;
+  height: calc(100% - 20px); /* Optional: adjust height if needed */
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  animation: scrollOne 20s linear infinite;
+  opacity: 1;
+}
+
+
+/* Staggered animation delays so they don't all appear together */
+.scroll-image:nth-child(1) { animation-delay: 0s; }
+.scroll-image:nth-child(2) { animation-delay: 3s; }
+.scroll-image:nth-child(3) { animation-delay: 6s; }
+.scroll-image:nth-child(4) { animation-delay: 9s; }
+.scroll-image:nth-child(5) { animation-delay: 12s; }
+.scroll-image:nth-child(6) { animation-delay: 15s; }
+.scroll-image:nth-child(7) { animation-delay: 18s; }
+
+
+@keyframes scrollOne {
+  0% {
+    left: 100vw;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  85% {
+    left: -300px;
+    opacity: 1;
+  }
+  86% {
+    opacity: 0;
+  }
+  100% {
+    left: -300px;
+    opacity: 0;
+  }
+}
+.menu-section h3 {
+  font-size: 3rem;       /* Larger section titles */
+  font-weight: 700;
+  margin-top: 2rem;
+  text-align: center;
+  font-family: 'Big Shoulders Text', cursive;
+}
+
+.menu-section p {
+  font-size: 1.8rem;     /* Bigger paragraph text */
+  line-height: 2;
+  text-align: center;
+  font-family: 'Big Shoulders Text', cursive;
+  top: 20px;
+}
+
+.menu-section {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 16px;
+  margin-top: 130px;
+  max-width: 50px;       /* limit the width */
+  margin-left: auto;      /* center horizontally */
+  margin-right: auto;
+}
+
+.menu-section h3 {
+  font-size: 2rem;
+  color: #b85c38;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+
+.nav-flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;        /* Changed from absolute to fixed */
+  top: 0;                 /* Stick to top */
+  z-index: 100;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Optional background for visibility */
+}
+
+.nav-flex-row li {
+  list-style-type: none;
+  padding: 20px 15px;
+}
+
+.nav-flex-row li a {
+  font-family: 'Big Shoulders Text', cursive;
+  color: #ffffff;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-flex-row li a:hover {
+  color: #b85c38;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/rabbit.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.menu-section {
+  max-width: 50vw;         /* Use 90% of the viewport width */
+  width: 100%;
+  padding: 2rem;
+  margin: 130px auto 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+
+.menu-section article {
+  width: 100%;
+}
