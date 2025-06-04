@@ -1,17 +1,18 @@
 if (shouldPlay === 'true') {
   const audio = document.createElement('audio');
   audio.id = 'bgMusic';
-  audio.src = 'music/Merry Christmas Mr. Lawrence.mp3';
+  audio.src = 'music/fish in the pool.mp3';
   audio.loop = true;
   document.body.appendChild(audio);
 
   audio.volume = 0;
   audio.play().then(() => {
     let vol = 0;
+    const targetVolume = 0.4; // ✅ final volume (e.g. 40%)
     const fadeIn = setInterval(() => {
-      if (vol < 1) {
+      if (vol < targetVolume) {
         vol += 0.05;
-        audio.volume = vol;
+        audio.volume = Math.min(vol, targetVolume);
       } else {
         clearInterval(fadeIn);
       }
