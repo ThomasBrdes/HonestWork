@@ -1,7 +1,7 @@
 if (shouldPlay === 'true') {
   const audio = document.createElement('audio');
   audio.id = 'bgMusic';
-  audio.src = 'music/Merry Christmas Mr. Lawrence.mp3';
+  audio.src = 'music/Swan Serenade - Piano House.mp3';
   audio.loop = true;
   document.body.appendChild(audio);
 
