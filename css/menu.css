@@ -29,19 +29,22 @@
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  animation: scrollOne 20s linear infinite;
+  animation: scrollOne 36s linear infinite;
   opacity: 1;
 }
 
 
 /* Staggered animation delays so they don't all appear together */
 .scroll-image:nth-child(1) { animation-delay: 0s; }
-.scroll-image:nth-child(2) { animation-delay: 3s; }
-.scroll-image:nth-child(3) { animation-delay: 6s; }
-.scroll-image:nth-child(4) { animation-delay: 9s; }
-.scroll-image:nth-child(5) { animation-delay: 12s; }
-.scroll-image:nth-child(6) { animation-delay: 15s; }
-.scroll-image:nth-child(7) { animation-delay: 18s; }
+.scroll-image:nth-child(2) { animation-delay: 4s; }
+.scroll-image:nth-child(3) { animation-delay: 8s; }
+.scroll-image:nth-child(4) { animation-delay: 12s; }
+.scroll-image:nth-child(5) { animation-delay: 16s; }
+.scroll-image:nth-child(6) { animation-delay: 20s; }
+.scroll-image:nth-child(7) { animation-delay: 24s; }
+.scroll-image:nth-child(8) { animation-delay: 28s; }
+.scroll-image:nth-child(9) { animation-delay: 32s; }
+.scroll-image:nth-child(10) { animation-delay: 36s; }
 
 
 @keyframes scrollOne {
